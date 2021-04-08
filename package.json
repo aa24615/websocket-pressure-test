@@ -1,0 +1,36 @@
+{
+  "name": "websocket-pressure-test",
+  "version": "1.0.0",
+  "description": "websocket压力测试",
+  "main": "src/webSocketPressureTest.js",
+  "scripts": {
+    "test": "node ./src/webSocketPressureTest.js",
+    "fix": "./node_modules/.bin/eslint --ext .js,.html src/ --fix"
+  },
+  "bin": {
+    "webSocketPressureTest": "./src/webSocketPressureTest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aa24615/qadmin.git"
+  },
+  "keywords": [
+    "websocket压力测试",
+    "websocket测试",
+    "长连接测试",
+    "swoole测试",
+    "workerman测试"
+  ],
+  "author": "读心印",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-react": "^7.23.1"
+  },
+  "dependencies": {
+    "cli-color": "^2.0.0",
+    "websocket": "^1.0.33"
+  }
+}
