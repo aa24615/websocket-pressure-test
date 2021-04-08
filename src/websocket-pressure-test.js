@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 // +-------------------------------------------------------------------------
 // | webSocket并发压力测试
@@ -6,7 +7,8 @@
 // +-------------------------------------------------------------------------
 // | Author: 读心印 <839024615@qq.com>
 // +-------------------------------------------------------------------------
-const clc = require("cli-color");
+
+const clc = require('cli-color');
 const WebSocketClient = require('websocket').client;
 let count = 0;
 let failed = 0;
@@ -55,8 +57,7 @@ function state() {
     console.debug(
         clc.green('连接成功:')+clc.white(count),
         clc.yellow('连接失败:')+clc.white(failed),
-        clc.magenta('连接错误:')+clc.white(error) ,
-        clc.yellow('连接关闭:')+clc.white(close)
+        clc.magenta('连接错误:')+clc.white(error),
+        clc.yellow('连接关闭:')+clc.white(close),
     );
-
 }

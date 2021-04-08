@@ -1,18 +1,18 @@
 {
   "name": "websocket-pressure-test",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "websocket压力测试",
   "main": "src/webSocketPressureTest.js",
   "scripts": {
-    "test": "node ./src/webSocketPressureTest.js",
+    "test": "node ./src/websocket-pressure-test.js",
     "fix": "./node_modules/.bin/eslint --ext .js,.html src/ --fix"
   },
   "bin": {
-    "webSocketPressureTest": "./src/webSocketPressureTest"
+    "websocket-pressure-test": "./src/websocket-pressure-test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aa24615/qadmin.git"
+    "url": "git+https://github.com/aa24615/websocket-pressure-test.git"
   },
   "keywords": [
     "websocket压力测试",
