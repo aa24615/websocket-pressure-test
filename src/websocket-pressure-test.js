@@ -5,7 +5,7 @@
 // +-------------------------------------------------------------------------
 // | Copyright (c) 2017~2018 http://blog.php127.com All rights reserved.
 // +-------------------------------------------------------------------------
-// | Author: 读心印 <839024615@qq.com>
+// | Author: 读心印 <aa24615@qq.com>
 // +-------------------------------------------------------------------------
 
 const clc = require('cli-color');
@@ -35,6 +35,7 @@ try {
     customJSON = null;
 }
 
+const connectList = [];
 
 for (let i = 1; i <= c; i++) {
     ws(i);
@@ -42,10 +43,15 @@ for (let i = 1; i <= c; i++) {
 
 function ws(i) {
     const client = new WebSocketClient();
+
+    connectList[i] = client;
+
     client.on('connectFailed', function (error) {
         failed++;
         state();
+        console.log('Connect Error: ' + error.toString());
     });
+
     client.on('connect', function (connection) {
         count++;
         state();
@@ -103,4 +109,11 @@ function state() {
         clc.magenta('已接收字节:') + clc.white(byteReceived < 1024 ? byteReceived + 'B' : (byteReceived / 1024).toFixed(2) + 'KB'),
         clc.red('已接收訊息:') + clc.white(messageReceived)
     );
+}
+
+function closeAll(){
+    for (let i = 1; i <= c; i++) {
+        connectList[i].abort();
+    }
+    console.debug( clc.green('结束') );
 }

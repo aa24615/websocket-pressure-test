@@ -1,6 +1,6 @@
 {
   "name": "websocket-pressure-test",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "websocket压力测试",
   "main": "src/webSocketPressureTest.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "fix": "./node_modules/.bin/eslint --ext .js,.html src/ --fix"
   },
   "bin": {
-    "websocket-pressure-test": "./src/websocket-pressure-test.js"
+    "websocket-pressure-test": "./src/websocket-pressure-test.js",
+    "websocket-server": "./src/websocket-server.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
   },
   "dependencies": {
     "cli-color": "^2.0.0",
-    "websocket": "^1.0.33"
+    "websocket": "^1.0.33",
+    "ws": "^8.2.3"
   }
 }
