@@ -20,12 +20,9 @@ npm i websocket-pressure-test
 
 ### 运行
 
+./node_modules/.bin/websocket-pressure-test 地址 并发数 发送内容.json[可选]
 
 ```shell
-/**
- * ./node_modules/.bin/websocket-pressure-test 地址 并发数 发送内容.json[可选]
- */
- 
 ./node_modules/.bin/websocket-pressure-test ws://127.0.0.1:8080 10000 ./node_modules/websocket-pressure-test/package.json
 
 ```
